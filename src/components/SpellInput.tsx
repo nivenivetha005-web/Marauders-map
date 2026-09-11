@@ -104,7 +104,7 @@ export function SpellInput({
   return (
     <div className="flex flex-col items-center gap-4 text-center">
       <div className="flex items-center gap-2">
-        <h2 className="ink-etched font-[var(--font-spell)] text-2xl tracking-wide text-[var(--spell-burgundy)]">
+        <h2 className="ink-etched min-w-0 font-[var(--font-spell)] text-5xl tracking-wide text-[var(--spell-burgundy)]">
           {micState === "listening" ? listeningHeading : heading}
         </h2>
         <button

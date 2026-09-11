@@ -78,8 +78,7 @@
   background: radial-gradient(circle at 35% 30%, #7a2431 0%, var(--seal-burgundy) 55%, var(--seal-burgundy-dark) 100%);
   box-shadow:
     inset 0 3px 6px rgba(255, 255, 255, 0.18),
-    inset 0 -4px 10px rgba(0, 0, 0, 0.45),
-    0 6px 14px rgba(0, 0, 0, 0.45);
+    inset 0 -4px 10px rgba(0, 0, 0, 0.45);
   transition: transform 650ms ease-in, opacity 650ms ease-in 100ms;
 }
 
@@ -144,34 +143,6 @@
 }
 
 /* ---- Memory reveal ---- */
-
-.memory-reveal {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 650ms ease, transform 650ms ease;
-}
-
-.memory-reveal[data-visible="true"] {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-stagger-1,
-.reveal-stagger-2,
-.reveal-stagger-3 {
-  opacity: 0;
-  transform: translateY(8px);
-  animation: reveal-stagger-in 500ms ease-out forwards;
-}
-
-.reveal-stagger-1 { animation-delay: 0ms; }
-.reveal-stagger-2 { animation-delay: 120ms; }
-.reveal-stagger-3 { animation-delay: 270ms; }
-
-@keyframes reveal-stagger-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 .memory-frame {
   position: relative;

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import type { Photo } from "@/lib/locations";
 import { Polaroid } from "./Polaroid";
+import { InkRevealMask } from "./InkRevealMask";
 
 export type GalleryLayout = "grid" | "list";
 
@@ -50,11 +51,13 @@ export function PhotoGallery({ photos, locationName, layout }: PhotoGalleryProps
               className="w-full max-w-xs"
               onClick={(event) => event.stopPropagation()}
             >
-              <Polaroid
-                photo={photos[expandedIndex]}
-                alt={`Memory from ${locationName}`}
-                size="expanded"
-              />
+              <InkRevealMask>
+                <Polaroid
+                  photo={photos[expandedIndex]}
+                  alt={`Memory from ${locationName}`}
+                  size="expanded"
+                />
+              </InkRevealMask>
               <button
                 type="button"
                 onClick={() => setExpandedIndex(null)}

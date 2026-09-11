@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { matchesClosingPhrase, CLOSING_PHRASE } from "@/lib/oathMatch";
 import { Parchment } from "./Parchment";
 import { SpellInput } from "./SpellInput";
+import { InkRevealMask } from "./InkRevealMask";
 
 interface ExitSpellDialogProps {
   onAccepted: () => void;
@@ -28,13 +29,15 @@ export function ExitSpellDialog({ onAccepted, onCancel }: ExitSpellDialogProps) 
     >
       <div className="w-full max-w-sm" onClick={(event) => event.stopPropagation()}>
         <Parchment stage="ready">
-          <SpellInput
-            phrase={CLOSING_PHRASE}
-            matcher={matchesClosingPhrase}
-            heading="Speak the Closing Words"
-            listeningHeading="Listening…"
-            onAccepted={onAccepted}
-          />
+          <InkRevealMask>
+            <SpellInput
+              phrase={CLOSING_PHRASE}
+              matcher={matchesClosingPhrase}
+              heading="Speak the Closing Words"
+              listeningHeading="Listening…"
+              onAccepted={onAccepted}
+            />
+          </InkRevealMask>
         </Parchment>
         <button
           type="button"
