@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="paperroom-of-requirement" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecdcb6"/>
+      <stop offset="1" stop-color="#d9c193"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#paperroom-of-requirement)"/>
+  <path d="M10 8 C 120 2, 280 2, 390 9 C 397 120, 397 190, 390 291 C 260 298, 130 298, 10 291 C 4 190, 4 110, 10 8 Z"
+        fill="none" stroke="#5b3d24" stroke-width="2" opacity="0.5"/>
+  <path d="M8 6 L 34 6 L 8 32 Z" fill="#c9ac78" opacity="0.55"/>
+  <g stroke="#4a3320" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    
+    <path d="M150 220 v-110 q50 -40 100 0 v110 Z"/>
+    <circle cx="220" cy="165" r="4" fill="#4a3320" stroke="none"/>
+    <path d="M120 220 h160" />
+  
+  </g>
+</svg>

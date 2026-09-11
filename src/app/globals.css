@@ -1,26 +1,28 @@
 @import "tailwindcss";
+@import "../styles/parchment.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink-dark: #3a2a1a;
+  --ink-fade: #6b5535;
+  --parchment-light: #ecdcb6;
+  --parchment-mid: #d9c193;
+  --parchment-dark: #b9a06e;
+  --seal-burgundy: #5c1a24;
+  --seal-burgundy-dark: #3c0f16;
+  --spell-burgundy: #6b1b1b;
+  --hall-shadow: #14100b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--hall-shadow);
+  --color-foreground: var(--parchment-light);
+  --font-ink: var(--font-ink);
+  --font-hand: var(--font-hand);
+  --font-spell: var(--font-spell);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #c9a877 url("/textures/mobile-bg.png") center / cover no-repeat fixed;
+  color: var(--ink-dark);
+  font-family: var(--font-ink), "Iowan Old Style", serif;
 }
